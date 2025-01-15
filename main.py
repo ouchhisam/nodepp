@@ -275,7 +275,7 @@ async def main():
     print("1. Single Account Mode")
     print("2. Multi-Account Mode")
     
-    mode_choice = 1
+    mode_choice = '1'
     
     all_proxies = load_proxies('proxies.txt')
     
