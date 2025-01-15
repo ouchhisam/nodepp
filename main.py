@@ -16,45 +16,7 @@ from colorama import Fore, Style, init
 
 init(autoreset=True)
 
-def show_warning():
-    print(Fore.CYAN + Style.BRIGHT + """
-░▀▀█░█▀█░▀█▀░█▀█
-░▄▀░░█▀█░░█░░█░█
-░▀▀▀░▀░▀░▀▀▀░▀░▀
-╔══════════════════════════════════╗
-║                                  ║
-║  ZAIN ARAIN                      ║
-║  AUTO SCRIPT MASTER              ║
-║                                  ║
-║  JOIN TELEGRAM CHANNEL NOW!      ║
-║  https://t.me/AirdropScript6              ║
-║  @AirdropScript6 - OFFICIAL      ║
-║  CHANNEL                         ║
-║                                  ║
-║  FAST - RELIABLE - SECURE        ║
-║  SCRIPTS EXPERT                  ║
-║                                  ║
-╚══════════════════════════════════╝
-    """)
 
-    try:
-        confirm = input(
-            Fore.MAGENTA + Style.BRIGHT + 
-            "By using this tool, you accept all associated risks. Proceed with caution!\n" + 
-            Fore.YELLOW + 
-            "Press Enter to continue or Ctrl+C to cancel... "
-        )
-        if confirm.strip() == "":
-            print(Fore.GREEN + Style.BRIGHT + "Great! Proceeding with the process...")
-        else:
-            print(Fore.RED + Style.BRIGHT + "Exiting the program. Stay safe!")
-            exit()
-    except KeyboardInterrupt:
-        print(Fore.RED + Style.BRIGHT + "\nProcess terminated by user. Goodbye!")
-        exit()
-
-# Function call for testing
-show_warning()
 
 PING_INTERVAL = 60
 RETRIES = 60
@@ -375,7 +337,6 @@ async def single_account_mode(token, all_proxies):
     await asyncio.sleep(10)
 
 if __name__ == '__main__':
-    show_warning()
     try:
         asyncio.run(main())
     except (KeyboardInterrupt, SystemExit):
