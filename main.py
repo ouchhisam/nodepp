@@ -275,13 +275,13 @@ async def main():
     print("1. Single Account Mode")
     print("2. Multi-Account Mode")
     
-    mode_choice = input(Fore.LIGHTYELLOW_EX + "Insert your choice (1/2): ").strip()
+    mode_choice = 1
     
     all_proxies = load_proxies('proxies.txt')
     
     if mode_choice == '1':
         print(Fore.LIGHTYELLOW_EX + "Alright, we here! Insert your nodepay token that you got from the tutorial.\n")
-        token = input(Fore.LIGHTYELLOW_EX + "Nodepay Token: ").strip()
+        token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMzI4OTU5Nzc5MzAyMjMyMDY0IiwiaWF0IjoxNzM2OTI5NTcyLCJleHAiOjE3MzgxMzkxNzJ9.jNryMs1wDBXBgQrsWBcZo6pgbZbaew8S3OtqGDh_r_cNnMk4v8M1SF6tQX7BZgClrtOJ79svYy4Prf1EZ5Ms3Q"
         if not token:
             log("ERROR", "Token cannot be empty. Exiting the program.", Fore.LIGHTRED_EX)
             exit()
